@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+ x:Class="OpacMauiApp.Pages.JournalArrivalPage"
+ xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ Title="Journal Arrival Search"
+ BackgroundColor="#F3F4F6">
+
+
+    <Grid RowDefinitions="Auto,*">
+
+        <ScrollView Grid.Row="0">
+
+            <VerticalStackLayout Padding="15" ><!--//Spacing="15"-->
+
+                <!-- Search Section -->
+
+                <Frame
+                BackgroundColor="White"
+                CornerRadius="15"
+                Padding="15"
+                BorderColor="#E5E7EB">
+
+                    <VerticalStackLayout
+                    Spacing="10">
+
+                        <Label
+                        Text="Journal Arrival Search"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#111827"/>
+
+                        <Entry
+                        Placeholder="Journal Number"
+                        Text="{Binding JournalNo}" />
+
+                        <Grid
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="10">
+
+                            <VerticalStackLayout>
+
+                                <Label
+                                Text="Arrival Date From"
+                                FontAttributes="Bold"/>
+
+                                <DatePicker
+                                Date="{Binding ArrivalFrom}" />
+
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout
+                            Grid.Column="1">
+
+                                <Label
+                                Text="Arrival Date To"
+                                FontAttributes="Bold"/>
+
+                                <DatePicker
+                                Date="{Binding ArrivalTo}" />
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                        <HorizontalStackLayout
+                        Spacing="20">
+
+                            <HorizontalStackLayout>
+
+                                <CheckBox
+                                IsChecked="{Binding IsPending}" />
+
+                                <Label
+                                VerticalOptions="Center"
+                                Text="Pending"/>
+
+                            </HorizontalStackLayout>
+
+                            <HorizontalStackLayout>
+
+                                <CheckBox
+                                IsChecked="{Binding IsArrived}" />
+
+                                <Label
+                                VerticalOptions="Center"
+                                Text="Arrived"/>
+
+                            </HorizontalStackLayout>
+
+                        </HorizontalStackLayout>
+
+                        <Grid
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="10">
+
+                            <Button
+                            Text="Get Arrival Data"
+                            Command="{Binding SearchCommand}"
+                            BackgroundColor="#16A34A"
+                            TextColor="White"/>
+
+                            <Button
+                            Grid.Column="1"
+                            Text="Reset"
+                            Command="{Binding ResetCommand}"
+                            BackgroundColor="#DC2626"
+                            TextColor="White"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+        <!-- Loader -->
+        <Grid Grid.Row="1">
+            <ActivityIndicator
+                IsRunning="{Binding IsBusy}"
+            IsVisible="{Binding IsBusy}"
+            Color="Green"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
+
+                <!-- Result List -->
+
+                <CollectionView
+                   Margin="15,5"
+                ItemsSource="{Binding Arrivals}"
+                SelectionMode="None">
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <Frame
+                            Margin="0,0,0,12"
+                            Padding="15"
+                            CornerRadius="12"
+                            BorderColor="#E5E7EB"
+                            BackgroundColor="White">
+
+                                <VerticalStackLayout
+                                Spacing="8">
+
+                                    <!-- Header -->
+
+                                    <Label
+    FontSize="18"
+    FontAttributes="Bold"
+    TextColor="#1F2937">
+
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Journal No : "
+                  FontAttributes="Bold"/>
+                                                <Span Text="{Binding journal_no}"/>
+                                            </FormattedString>
+                                        </Label.FormattedText>
+
+                                    </Label>
+
+                                    <BoxView
+                                    HeightRequest="1"
+                                    BackgroundColor="#E5E7EB"/>
+
+                                    <!-- Details -->
+
+                                    <Grid
+    ColumnDefinitions="130,*"
+    RowDefinitions="Auto,Auto,Auto,Auto,Auto"
+    RowSpacing="8">
+
+                                        <Label Grid.Row="0"
+           Text="Arrival Date :"
+           FontAttributes="Bold"/>
+                                        <Label Grid.Row="0"
+           Grid.Column="1"
+           Text="{Binding arr_date,StringFormat='{0:dd-MMM-yyyy}'}"/>
+
+                                        <Label Grid.Row="1"
+           Text="Book No :"
+           FontAttributes="Bold"/>
+                                        <Label Grid.Row="1"
+           Grid.Column="1"
+           Text="{Binding bookno}"/>
+
+                                        
+
+                                    </Grid>
+
+                                    <!-- Status -->
+                                    <Label FontAttributes="Bold">
+
+                                        <Label.FormattedText>
+
+                                            <FormattedString>
+
+                                                <Span
+Text="Status : "
+FontAttributes="Bold"
+TextColor="Black"/>
+
+                                                <Span
+Text="{Binding Status}"
+TextColor="Green"/>
+
+                                            </FormattedString>
+
+                                        </Label.FormattedText>
+
+                                    </Label>
+
+
+                                </VerticalStackLayout>
+
+                            </Frame>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+        </Grid>
+
+
+
+    </Grid>
+   
+
+</ContentPage>

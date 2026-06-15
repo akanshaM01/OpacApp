@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="OpacMauiApp.Pages.Memberpage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Find Member Id"
+    BackgroundColor="#F3F4F6">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- SEARCH AREA -->
+
+        <ScrollView Grid.Row="0">
+
+            <VerticalStackLayout Padding="15">
+
+                <Frame
+                    BackgroundColor="White"
+                    BorderColor="#E5E7EB"
+                    CornerRadius="15"
+                    Padding="15">
+
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label
+                            Text="Find Member"
+                            FontSize="22"
+                            FontAttributes="Bold"/>
+
+                        <Entry
+                            HeightRequest="40"
+                            Placeholder="Enter Member Id"
+                            Text="{Binding MemberId}" />
+
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            ColumnSpacing="10">
+
+                            <Button
+                                Text="Search"
+                                Command="{Binding SearchCommand}"
+                                BackgroundColor="#16A34A"
+                                TextColor="White"/>
+
+                            <Button
+                                Grid.Column="1"
+                                Text="Reset"
+                                Command="{Binding ResetCommand}"
+                                BackgroundColor="#DC2626"
+                                TextColor="White"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <!-- RESULT AREA -->
+
+        <Grid Grid.Row="1">
+
+            <ActivityIndicator
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Color="Green"/>
+
+            <CollectionView
+                Margin="15,5"
+                ItemsSource="{Binding Members}"
+                SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Frame
+                            Margin="0,0,0,12"
+                            Padding="15"
+                            CornerRadius="12"
+                            BorderColor="#E5E7EB"
+                            BackgroundColor="White">
+
+                            <VerticalStackLayout Spacing="8">
+
+                                <Label
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    TextColor="#1F2937">
+
+                                    <Label.FormattedText>
+
+                                        <FormattedString>
+
+                                            <Span
+                                                Text="Member Id : "
+                                                FontAttributes="Bold"/>
+
+                                            <Span
+                                                Text="{Binding userid}"/>
+
+                                        </FormattedString>
+
+                                    </Label.FormattedText>
+
+                                </Label>
+
+                                <BoxView
+                                    HeightRequest="1"
+                                    BackgroundColor="#E5E7EB"/>
+
+                                <Grid
+ColumnDefinitions="150,*"
+RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+RowSpacing="8">
+
+                                    <Label Grid.Row="0"
+                                           Text="Member Name :"
+                                           FontAttributes="Bold"/>
+
+                                    <Label Grid.Row="0"
+                                           Grid.Column="1"
+                                           Text="{Binding MembName}"/>
+
+                                    <Label Grid.Row="1"
+                                           Text="Member Group :"
+                                           FontAttributes="Bold"/>
+
+                                    <Label Grid.Row="1"
+                                           Grid.Column="1"
+                                           Text="{Binding classname}"/>
+
+                                    <Label Grid.Row="2"
+                                           Text="Email :"
+                                           FontAttributes="Bold"/>
+
+                                    <Label Grid.Row="2"
+                                           Grid.Column="1"
+                                           Text="{Binding email1}"/>
+
+                                    <Label Grid.Row="3"
+                                           Text="Phone :"
+                                           FontAttributes="Bold"/>
+
+                                    <Label Grid.Row="3"
+                                           Grid.Column="1"
+                                           Text="{Binding phone1}"/>
+
+                                </Grid>
+
+                                <Label FontAttributes="Bold">
+
+                                    <Label.FormattedText>
+
+                                        <FormattedString>
+
+                                            <Span
+                                                Text="Status : "
+                                                FontAttributes="Bold"
+                                                TextColor="Black"/>
+
+                                            <Span
+                                                Text="{Binding status}"/>
+
+                                        </FormattedString>
+
+                                    </Label.FormattedText>
+
+                                </Label>
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

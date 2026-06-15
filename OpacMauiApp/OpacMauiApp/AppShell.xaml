@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Shell
+    x:Class="OpacMauiApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:OpacMauiApp.Pages">
+
+    <!-- DASHBOARD -->
+
+    <FlyoutItem Title="Dashboard">
+
+        <ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate pages:DashboardPage}" />
+
+    </FlyoutItem>
+    <FlyoutItem Title="Catalogue Search">
+
+        <ShellContent
+        Title="Basic Catalogue Search"
+        ContentTemplate="{DataTemplate pages:BasicCataloguePage}" />
+
+        <ShellContent
+        Title="Journal Catalogue Search"
+        ContentTemplate="{DataTemplate pages:JournalCataloguePage}" />
+
+    </FlyoutItem>
+
+    <FlyoutItem Title="Journal Management">
+
+        <ShellContent
+        Title="Journal Accession Search"
+        ContentTemplate="{DataTemplate pages:JournalAccessionPage}" />
+
+    </FlyoutItem>
+
+    <!-- BASIC --><!--
+
+    <MenuItem
+        Text="Basic Catalogue"
+        Clicked="BasicCatalogue_Clicked" />
+
+    --><!-- JOURNAL --><!--
+
+    <MenuItem
+        Text="Journal Catalogue"
+        Clicked="JournalCatalogue_Clicked" />-->
+
+</Shell>

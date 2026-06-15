@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<FlyoutPage
+    x:Class="OpacMauiApp.Pages.MainFlyoutPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Library OPAC">
+
+    <FlyoutPage.Flyout>
+
+        <ContentPage  Title="Menu" BackgroundColor="White">
+
+            <ScrollView>
+
+                <VerticalStackLayout
+                    Padding="20,50,20,20"
+                    Spacing="5">
+
+                    <Label
+                        Text="Library OPAC"
+                        FontSize="26"
+                        FontAttributes="Bold"
+                        TextColor="#2563EB" />
+
+                    <BoxView
+                        HeightRequest="1"
+                        Color="#E5E7EB"
+                        Margin="0,10" />
+
+                    <!-- CATALOGUE SEARCH -->
+
+                    <Button
+                        Text="📚 Catalogue Search"
+                        Clicked="Catalogue_Clicked"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Fill" />
+
+                    <VerticalStackLayout
+                        x:Name="CatalogueMenu"
+                        IsVisible="False"
+                        Padding="25,0,0,0">
+
+                        <Button
+                            Text="• Basic Catalogue Search"
+                            Clicked="BasicCatalogue_Clicked"
+                            BackgroundColor="Transparent"
+                            TextColor="#444" />
+
+                        <Button
+                            Text="• Journal Catalogue Search"
+                            Clicked="JournalCatalogue_Clicked"
+                            BackgroundColor="Transparent"
+                            TextColor="#444" />
+
+                    </VerticalStackLayout>
+
+                    <!-- JOURNAL MANAGEMENT -->
+
+                    <Button
+                        Text="📖 Journal Management"
+                        Clicked="JournalManagement_Clicked"
+                        BackgroundColor="Transparent"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Fill" />
+
+                    <VerticalStackLayout
+                        x:Name="JournalMenu"
+                        IsVisible="False"
+                        Padding="25,0,0,0">
+
+                        <Button
+                            Text="• Journal Accession Search"
+                            Clicked="JournalAccession_Clicked"
+                            BackgroundColor="Transparent"
+                            TextColor="#444" />
+                        <Button
+                            Text="• Journal Arrival Search"
+                            Clicked="JournalArrival_Clicked"
+                            BackgroundColor="Transparent"
+                            TextColor="#444"/>
+                        <Button
+                            Text="• Journal Issue Search"
+                            Clicked="JournalIssue_Clicked"
+                            BackgroundColor="Transparent"
+                            TextColor="#444"/>
+
+
+                    </VerticalStackLayout>
+                    <!--Memebre-->
+
+                    <Button
+                           Text="📖 Memeber Details"
+                           Clicked="MemeberDetails_Clicked"
+                           BackgroundColor="Transparent"
+                           TextColor="Black"
+                           FontAttributes="Bold"
+                           HorizontalOptions="Fill" />
+
+                    <VerticalStackLayout
+                           x:Name="MemberMenu"
+                           IsVisible="False"
+                           Padding="25,0,0,0">
+
+                        <Button
+                           Text="• Member Search"
+                           Clicked="MemberSearch_Clicked"
+                           BackgroundColor="Transparent"
+                           TextColor="#444" />
+                        <Button
+                               Text="• Overdue Details Of Member"
+                               Clicked="Overdue_Clicked"
+                               BackgroundColor="Transparent"
+                               TextColor="#444"/>
+                        <!--<Button
+                               Text="• Journal Issue Search"
+                               Clicked="JournalIssue_Clicked"
+                               BackgroundColor="Transparent"
+                               TextColor="#444"/>-->       
+
+
+                    </VerticalStackLayout>
+
+                  <!--Library Resource-->
+                    <Button
+                            Text="Library Resource"
+                            Clicked="Library_Clicked"
+                            BackgroundColor="Transparent"
+                            TextColor="Black"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Fill" />
+                    
+                    <VerticalStackLayout x:Name="LibraryMenu" IsVisible="False" Padding="25,0,0,0">
+
+                        <Button
+                               Text="•New Arrival Details"
+                               Clicked="NewArrival_Clicked"
+                               BackgroundColor="Transparent"
+                               TextColor="#444" />
+                        <Button
+                               Text="• Digital Content Search"
+                               Clicked="Digital_Clicked"
+                               BackgroundColor="Transparent"
+                               TextColor="#444"/>
+                    </VerticalStackLayout>
+                        <!--Intregated Search-->
+                    <Button
+                         Text="Integrated Search"
+                         Clicked="Integrated_Clicked"
+                         BackgroundColor="Transparent"
+                         TextColor="Black"
+                         FontAttributes="Bold"
+                         HorizontalOptions="Fill" />
+                    
+                    <VerticalStackLayout x:Name="IntegratedMenu" IsVisible="False" Padding="25,0,0,0">
+
+                        <Button
+                               Text="•Indent Status"
+                               Clicked="IndentStatus_Clicked"
+                               BackgroundColor="Transparent"
+                               TextColor="#444" />
+                        <Button
+                               Text="•Check Issue Return"
+                               Clicked="IssueReturn_Clicked"
+                               BackgroundColor="Transparent"
+                               TextColor="#444"/>
+                    </VerticalStackLayout>
+                </VerticalStackLayout>
+
+            </ScrollView>
+
+        </ContentPage>
+
+    </FlyoutPage.Flyout>
+
+</FlyoutPage>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="OpacMauiApp.Pages.ArrivalDetailPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Arrival Detail"
+    BackgroundColor="#F3F4F6">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- SEARCH PANEL -->
+
+        <ScrollView Grid.Row="0">
+
+            <VerticalStackLayout Padding="15">
+
+                <Frame
+                    BackgroundColor="White"
+                    BorderColor="#E5E7EB"
+                    CornerRadius="15"
+                    Padding="15">
+
+                    <VerticalStackLayout Spacing="8">
+
+                        <Label
+                            Text="Arrival Detail"
+                            FontSize="22"
+                            FontAttributes="Bold"/>
+
+                        <Entry
+                            HeightRequest="40"
+                            Placeholder="ArrMRN Number"
+                            Text="{Binding ArrMrnNo}" />
+
+                        <Entry
+                            HeightRequest="40"
+                            Placeholder="Order Number"
+                            Text="{Binding OrderNumber}" />
+
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            ColumnSpacing="10">
+
+                            <VerticalStackLayout>
+
+                                <Label
+                                    Text="Date From"
+                                    FontSize="13"
+                                    FontAttributes="Bold"/>
+
+                                <DatePicker
+                                    Date="{Binding DateFrom}" />
+
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout
+                                Grid.Column="1">
+
+                                <Label
+                                    Text="Date To"
+                                    FontSize="13"
+                                    FontAttributes="Bold"/>
+
+                                <DatePicker
+                                    Date="{Binding DateTo}" />
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            ColumnSpacing="10">
+
+                            <Button
+                                Text="Search"
+                                Command="{Binding SearchCommand}"
+                                BackgroundColor="#16A34A"
+                                TextColor="White"/>
+
+                            <Button
+                                Grid.Column="1"
+                                Text="Reset"
+                                Command="{Binding ResetCommand}"
+                                BackgroundColor="#DC2626"
+                                TextColor="White"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <!-- RESULT AREA -->
+
+        <Grid Grid.Row="1">
+
+            <ActivityIndicator
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Color="Green"/>
+
+            <CollectionView
+                Margin="15,5"
+                ItemsSource="{Binding Arrivals}"
+                SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Frame
+                            Margin="0,0,0,12"
+                            Padding="15"
+                            CornerRadius="12"
+                            BorderColor="#E5E7EB"
+                            BackgroundColor="White">
+
+                            <VerticalStackLayout
+                                Spacing="8">
+
+                                <Label
+                                    FontSize="18"
+                                    FontAttributes="Bold">
+
+                                    <Label.FormattedText>
+
+                                        <FormattedString>
+
+                                            <Span
+                                                Text="ArrMRN No : "
+                                                FontAttributes="Bold"/>
+
+                                            <Span
+                                                Text="{Binding ArrMrnNo}" />
+
+                                        </FormattedString>
+
+                                    </Label.FormattedText>
+
+                                </Label>
+
+                                <BoxView
+                                    HeightRequest="1"
+                                    BackgroundColor="#E5E7EB"/>
+
+                                <Grid
+ColumnDefinitions="150,*"
+RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+RowSpacing="8">
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Text="Arrival Date :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Text="{Binding ArriveDate,StringFormat='{0:dd-MMM-yyyy}'}"/>
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Text="Order Number :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Text="{Binding OrderNumber}"/>
+
+                                    <Label
+                                        Grid.Row="2"
+                                        Text="No Of Copies :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="2"
+                                        Grid.Column="1"
+                                        Text="{Binding NoOfCopies}"/>
+
+                                    <Label
+                                        Grid.Row="3"
+                                        Text="Vendor :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="3"
+                                        Grid.Column="1"
+                                        Text="{Binding vendor}"/>
+
+                                    <Label
+                                        Grid.Row="4"
+                                        Text="Invoice No :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="4"
+                                        Grid.Column="1"
+                                        Text="{Binding invoicenumber}"/>
+
+                                </Grid>
+
+                                <Label FontAttributes="Bold">
+
+                                    <Label.FormattedText>
+
+                                        <FormattedString>
+
+                                            <Span
+                                                Text="Status : "
+                                                FontAttributes="Bold"
+                                                TextColor="Black"/>
+
+                                            <Span
+                                                Text="{Binding ItemStatus}"
+                                                TextColor="Green"/>
+
+                                        </FormattedString>
+
+                                    </Label.FormattedText>
+
+                                </Label>
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

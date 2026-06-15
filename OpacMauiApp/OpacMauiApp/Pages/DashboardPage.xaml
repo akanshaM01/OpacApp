@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--<ContentPage
+    x:Class="OpacMauiApp.Pages.DashboardPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False"
+    BackgroundColor="#F5F7FA">-->
+<ContentPage
+    x:Class="OpacMauiApp.Pages.DashboardPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Web Opac"
+    BackgroundColor="#F5F7FA">
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="20,60,20,20"
+            Spacing="20">
+
+            <!-- Header -->
+            <Frame
+                CornerRadius="20"
+                BackgroundColor="#2563EB"
+                BorderColor="#2563EB"
+                Padding="20">
+
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="Library OPAC"
+                        FontSize="28"
+                        FontAttributes="Bold"
+                        TextColor="White"/>
+
+                    <Label
+                        Text="Welcome to Dashboard"
+                        FontSize="15"
+                        TextColor="White"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <!-- Cards -->
+
+            <Frame
+                CornerRadius="18"
+                Padding="20"
+                BackgroundColor="White">
+
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="📚 Search Books"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                    <Label
+                        Text="Find books, journals and resources"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Frame
+                CornerRadius="18"
+                Padding="20"
+                BackgroundColor="White">
+
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="📖 My Issued Books"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                    <Label
+                        Text="Check issued and return books"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+            <Frame
+                CornerRadius="18"
+                Padding="20"
+                BackgroundColor="White">
+
+                <VerticalStackLayout>
+
+                    <Label
+                        Text="❤️ Wishlist"
+                        FontSize="20"
+                        FontAttributes="Bold"/>
+
+                    <Label
+                        Text="Saved books and favourites"/>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

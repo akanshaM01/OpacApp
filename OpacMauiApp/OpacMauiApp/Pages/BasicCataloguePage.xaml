@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="OpacMauiApp.Pages.BasicCataloguePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Basic Catalogue"
+    BackgroundColor="#F5F7FA">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <ScrollView Grid.Row="0">
+
+            <VerticalStackLayout Padding="15">
+
+                <!-- AI SEARCH -->
+
+                <!--<Frame
+                Padding="15"
+                CornerRadius="15"
+                BackgroundColor="White"
+                BorderColor="#E5E7EB"
+                HasShadow="False">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label
+                        Text="AI Search"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        TextColor="Black"/>
+
+                    <Entry
+                        Placeholder="Title Author"
+                        Text="{Binding TitleAuthor}" />
+
+                    <Entry
+                        Placeholder="Title"
+                        Text="{Binding AITitle}" />
+
+                    <Button
+                        Text="AI Search"
+                        Command="{Binding AISearchCommand}"
+                        BackgroundColor="#2563EB"
+                        TextColor="White"
+                        CornerRadius="10"/>
+                </VerticalStackLayout>
+
+            </Frame>-->
+
+                <!-- BASIC SEARCH -->
+
+                <Frame
+                Padding="15"
+                CornerRadius="15"
+                BackgroundColor="White"
+                BorderColor="#E5E7EB"
+                HasShadow="False">
+
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label
+                        Text="Basic Search"
+                        FontAttributes="Bold"
+                        FontSize="18"
+                        TextColor="Black"/>
+
+                        <Entry
+                        Placeholder="Title"
+                        Text="{Binding Title}" />
+
+                        <Entry
+                        Placeholder="Author"
+                        Text="{Binding Author}" />
+
+                        <Entry
+                        Placeholder="Publisher"
+                        Text="{Binding Publisher}" />
+
+                        <Entry
+                        Placeholder="Subject"
+                        Text="{Binding Subject}" />
+
+                        <Entry
+                        Placeholder="Keyword"
+                        Text="{Binding Keywords}" />
+
+                        <HorizontalStackLayout Spacing="10">
+
+                            <Button
+                            Text="Search"
+                            Command="{Binding SearchCommand}"
+                            BackgroundColor="#2563EB"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HorizontalOptions="FillAndExpand"/>
+
+                            <Button
+                            Text="Reset"
+                            Command="{Binding ResetCommand}"
+                            BackgroundColor="#6B7280"
+                            TextColor="White"
+                            CornerRadius="10"
+                            HorizontalOptions="FillAndExpand"/>
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- LOADER -->
+        <Grid Grid.Row="1">
+            <ActivityIndicator
+                IsRunning="{Binding IsLoading}"
+                IsVisible="{Binding IsLoading}"
+                Color="Green"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <!-- RESULT -->
+
+            <CollectionView Margin="15,5"
+                ItemsSource="{Binding Books}"
+                SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Frame
+                            Margin="0,0,0,12"
+                            Padding="15"
+                            CornerRadius="14"
+                            BackgroundColor="White"
+                            BorderColor="#E5E7EB"
+                            HasShadow="False">
+
+                            <VerticalStackLayout Spacing="10">
+
+                                <!-- TITLE -->
+
+                                <HorizontalStackLayout Spacing="5">
+
+                                    <Label
+                                        Text="Title :"
+                                        FontAttributes="Bold"
+                                        FontSize="15"
+                                        TextColor="Black"/>
+
+                                    <Label
+                                        Text="{Binding Title}"
+                                        FontSize="15"
+                                        TextColor="Black"
+                                        LineBreakMode="WordWrap"
+                                        HorizontalOptions="FillAndExpand"/>
+                                </HorizontalStackLayout>
+
+                                <!-- AUTHOR -->
+
+                                <HorizontalStackLayout Spacing="5">
+
+                                    <Label
+                                        Text="Author :"
+                                        FontAttributes="Bold"
+                                        FontSize="14"
+                                        TextColor="Black"/>
+
+                                    <Label
+                                        Text="{Binding Author}"
+                                        FontSize="14"
+                                        TextColor="#374151"
+                                        LineBreakMode="WordWrap"
+                                        HorizontalOptions="FillAndExpand"/>
+                                </HorizontalStackLayout>
+
+                                <!-- PUBLISHER -->
+
+                                <HorizontalStackLayout Spacing="5">
+
+                                    <Label
+                                        Text="Publisher :"
+                                        FontAttributes="Bold"
+                                        FontSize="14"
+                                        TextColor="Black"/>
+
+                                    <Label
+                                        Text="{Binding Publisher}"
+                                        FontSize="14"
+                                        TextColor="#374151"
+                                        LineBreakMode="WordWrap"
+                                        HorizontalOptions="FillAndExpand"/>
+                                </HorizontalStackLayout>
+
+                                <!-- SUBJECT -->
+
+                                <HorizontalStackLayout Spacing="5">
+
+                                    <Label
+                                        Text="Subject :"
+                                        FontAttributes="Bold"
+                                        FontSize="14"
+                                        TextColor="Black"/>
+
+                                    <Label
+                                        Text="{Binding Subject}"
+                                        FontSize="14"
+                                        TextColor="#374151"
+                                        LineBreakMode="WordWrap"
+                                        HorizontalOptions="FillAndExpand"/>
+                                </HorizontalStackLayout>
+
+                                <!-- CALL NO -->
+
+                                <HorizontalStackLayout Spacing="5">
+
+                                    <Label
+                                        Text="Call No :"
+                                        FontAttributes="Bold"
+                                        FontSize="14"
+                                        TextColor="Black"/>
+
+                                    <Label
+                                        Text="{Binding ClassNo}"
+                                        FontSize="14"
+                                        TextColor="#374151"
+                                        LineBreakMode="WordWrap"
+                                        HorizontalOptions="FillAndExpand"/>
+                                </HorizontalStackLayout>
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </Grid>
+    </Grid>
+
+</ContentPage>

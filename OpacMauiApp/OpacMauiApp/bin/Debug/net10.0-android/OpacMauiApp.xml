@@ -1,0 +1,738 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>OpacMauiApp</name>
+    </assembly>
+    <members>
+        <member name="T:OpacMauiApp.ViewModels.ArrivalDetailViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.ArrMrnNo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.ArrivalDetailViewModel.arrMrnNo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.OrderNumber">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.ArrivalDetailViewModel.orderNumber"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.DateFrom">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.ArrivalDetailViewModel.dateFrom"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.DateTo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.ArrivalDetailViewModel.dateTo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.ArrivalDetailViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.ArrivalDetailViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.ArrivalDetailViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.ArrivalDetailViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.ArrivalDetailViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.ArrivalDetailViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.BasicCatalogueViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.Title">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.BasicCatalogueViewModel.title"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.Author">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.BasicCatalogueViewModel.author"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.Publisher">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.BasicCatalogueViewModel.publisher"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.Subject">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.BasicCatalogueViewModel.subject"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.Keywords">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.BasicCatalogueViewModel.keywords"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.IsLoading">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.BasicCatalogueViewModel.isLoading"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.BasicCatalogueViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.BasicCatalogueViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.BasicCatalogueViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.BasicCatalogueViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.BasicCatalogueViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.CheckIssueReturnViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.AccessionNo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.accessionNo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.UserId">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.userId"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.CheckIssueReturnViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.DigitalContSearchViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.DigitalContSearchViewModel.Title">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.DigitalContSearchViewModel.title"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.DigitalContSearchViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.DigitalContSearchViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.DigitalContSearchViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.DigitalContSearchViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.DigitalContSearchViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.DigitalContSearchViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.DigitalContSearchViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.DigitalContSearchViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.DigitalContSearchViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.DigitalContSearchViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.IndentViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.IndentViewModel.IndentNumber">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.IndentViewModel.indentNumber"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.IndentViewModel.SelectedDepartment">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.IndentViewModel.selectedDepartment"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.IndentViewModel.DateFrom">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.IndentViewModel.dateFrom"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.IndentViewModel.DateTo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.IndentViewModel.dateTo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.IndentViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.IndentViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.IndentViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.IndentViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.IndentViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.IndentViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.IndentViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.IndentViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.IndentViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.IndentViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.JournalAccessionViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.Title">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.title"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.Accno">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.accno"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.Dept">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.dept"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.Issn">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.issn"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.Publisher">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.publisher"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.Agent">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.agent"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.FilterText">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.filterText"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.EntryDateFrom">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.entryDateFrom"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.EntryDateTo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.entryDateTo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalAccessionViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalAccessionViewModel.Reset"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalAccessionViewModel.toggleMoreCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.ToggleMoreCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalAccessionViewModel.ToggleMoreCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalAccessionViewModel.ToggleMore(OpacMauiApp.Models.VJournalAccession)"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.JournalArrivalViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.JournalNo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.journalNo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.FilterText">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.filterText"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.IsPending">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.isPending"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.IsArrived">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.isArrived"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.ArrivalFrom">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.arrivalFrom"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.ArrivalTo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.arrivalTo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalArrivalViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalArrivalViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalArrivalViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalArrivalViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.JournalCatalogueViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.Title">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.title"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.Accno">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.accno"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.Dept">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.dept"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.Issn">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.issn"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.Publisher">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.publisher"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.Agent">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.agent"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.EntryDateFrom">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.entryDateFrom"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.EntryDateTo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.entryDateTo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalCatalogueViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalCatalogueViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalCatalogueViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalCatalogueViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.JournalIssueViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalIssueViewModel.MemberCode">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalIssueViewModel.memberCode"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalIssueViewModel.IssueFrom">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalIssueViewModel.issueFrom"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalIssueViewModel.IssueTo">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalIssueViewModel.issueTo"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalIssueViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.JournalIssueViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalIssueViewModel.issuedCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalIssueViewModel.IssuedCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalIssueViewModel.IssuedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalIssueViewModel.Issued"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalIssueViewModel.returnedCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalIssueViewModel.ReturnedCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalIssueViewModel.ReturnedCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalIssueViewModel.Returned"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.JournalIssueViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.JournalIssueViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.JournalIssueViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.JournalIssueViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.LoginViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.LoginViewModel.UserName">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.LoginViewModel.userName"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.LoginViewModel.Password">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.LoginViewModel.password"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.LoginViewModel.LoginResponse">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.LoginViewModel.loginResponse"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.LoginViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.LoginViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.LoginViewModel.loginCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.LoginViewModel.LoginCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.LoginViewModel.LoginCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.LoginViewModel.Login"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.MemberCode">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.memberCode"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.MemberOverdueDetailViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.ViewModels.MemberViewModel">
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.MemberViewModel.MemberId">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.MemberViewModel.memberId"/>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.MemberViewModel.IsBusy">
+            <inheritdoc cref="F:OpacMauiApp.ViewModels.MemberViewModel.isBusy"/>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.MemberViewModel.searchCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.MemberViewModel.SearchCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.MemberViewModel.SearchCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.MemberViewModel.Search"/>.</summary>
+        </member>
+        <member name="F:OpacMauiApp.ViewModels.MemberViewModel.resetCommand">
+            <summary>The backing field for <see cref="P:OpacMauiApp.ViewModels.MemberViewModel.ResetCommand"/>.</summary>
+        </member>
+        <member name="P:OpacMauiApp.ViewModels.MemberViewModel.ResetCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand"/> instance wrapping <see cref="M:OpacMauiApp.ViewModels.MemberViewModel.Reset"/>.</summary>
+        </member>
+        <member name="T:OpacMauiApp.Resource">
+            <summary>
+            Android Resource Designer class.
+            Exposes the Android Resource designer assembly into the project Namespace.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Button.TextColorTo(Microsoft.Maui.Controls.Button,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_DatePicker.TextColorTo(Microsoft.Maui.Controls.DatePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Editor.TextColorTo(Microsoft.Maui.Controls.Editor,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Entry.TextColorTo(Microsoft.Maui.Controls.Entry,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_InputView.TextColorTo(Microsoft.Maui.Controls.InputView,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Label.TextColorTo(Microsoft.Maui.Controls.Label,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_Picker.TextColorTo(Microsoft.Maui.Controls.Picker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_RadioButton.TextColorTo(Microsoft.Maui.Controls.RadioButton,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_SearchBar.TextColorTo(Microsoft.Maui.Controls.SearchBar,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="M:Microsoft.Maui.Controls.ColorAnimationExtensions_TimePicker.TextColorTo(Microsoft.Maui.Controls.TimePicker,Microsoft.Maui.Graphics.Color,System.UInt32,System.UInt32,Microsoft.Maui.Easing,System.Threading.CancellationToken)">
+            <summary>
+            Animates the TextColor of an <see cref = "T:Microsoft.Maui.ITextStyle"/> to the given color
+            </summary>
+            <param name = "element"></param>
+            <param name = "color">The target color to animate the <see cref = "P:Microsoft.Maui.ITextStyle.TextColor"/> to</param>
+            <param name = "rate">The time, in milliseconds, between the frames of the animation</param>
+            <param name = "length">The duration, in milliseconds, of the animation</param>
+            <param name = "easing">The easing function to be used in the animation</param>
+            <param name = "token"><see cref = "T:System.Threading.CancellationToken"/></param>
+            <returns>Value indicating if the animation completed successfully or not</returns>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ArrMrnNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ArrMrnNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OrderNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OrderNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.DateTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "DateTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Author">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Author" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Publisher">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Publisher" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Subject">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Subject" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Keywords">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Keywords" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.AccessionNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "AccessionNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IndentNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IndentNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.SelectedDepartment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "SelectedDepartment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Accno">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Accno" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Dept">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Dept" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Issn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Issn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Agent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Agent" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.FilterText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "FilterText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EntryDateFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EntryDateFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.EntryDateTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "EntryDateTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.JournalNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "JournalNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsPending">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsPending" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsArrived">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsArrived" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ArrivalFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ArrivalFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.ArrivalTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "ArrivalTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MemberCode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MemberCode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IssueFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IssueFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IssueTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IssueTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.UserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.LoginResponse">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "LoginResponse" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.MemberId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "MemberId" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ArrMrnNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ArrMrnNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OrderNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OrderNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.DateTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "DateTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Title">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Title" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Author">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Author" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Publisher">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Publisher" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Subject">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Subject" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Keywords">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Keywords" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsLoading">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsLoading" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.AccessionNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "AccessionNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserId" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IndentNumber">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IndentNumber" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.SelectedDepartment">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "SelectedDepartment" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Accno">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Accno" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Dept">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Dept" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Issn">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Issn" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Agent">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Agent" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.FilterText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "FilterText" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EntryDateFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EntryDateFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.EntryDateTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "EntryDateTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.JournalNo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "JournalNo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsPending">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsPending" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsArrived">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsArrived" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ArrivalFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ArrivalFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.ArrivalTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "ArrivalTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MemberCode">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MemberCode" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IssueFrom">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IssueFrom" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IssueTo">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IssueTo" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.UserName">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "UserName" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Password">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Password" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.LoginResponse">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "LoginResponse" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.MemberId">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "MemberId" generated properties.</summary>
+        </member>
+    </members>
+</doc>

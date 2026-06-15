@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="OpacMauiApp.Pages.JournalIssuePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Journal Issue Search"
+    BackgroundColor="#F3F4F6">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- SEARCH PANEL -->
+
+        <ScrollView Grid.Row="0">
+
+            <VerticalStackLayout Padding="15">
+
+                <Frame
+                    BackgroundColor="White"
+                    CornerRadius="15"
+                    Padding="15"
+                    BorderColor="#E5E7EB">
+
+                    <VerticalStackLayout Spacing="8">
+
+                        <Label
+                            Text="Journal Issue Search"
+                            FontSize="22"
+                            FontAttributes="Bold"
+                            TextColor="#111827"/>
+
+                        <!-- Member Code -->
+
+                        <Entry
+                            HeightRequest="42"
+                            Placeholder="Member Code"
+                            Text="{Binding MemberCode}" />
+
+                        <!-- Dates -->
+
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            ColumnSpacing="10">
+
+                            <VerticalStackLayout>
+
+                                <Label
+                                    Text="Issue Date From"
+                                    FontAttributes="Bold"
+                                    FontSize="13"/>
+
+                                <DatePicker
+                                    Date="{Binding IssueFrom}" />
+
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout
+                                Grid.Column="1">
+
+                                <Label
+                                    Text="Issue Date To"
+                                    FontAttributes="Bold"
+                                    FontSize="13"/>
+
+                                <DatePicker
+                                    Date="{Binding IssueTo}" />
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                        <!-- BUTTONS -->
+
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            ColumnSpacing="10">
+
+                            <Button
+                                Text="Issued"
+                                Command="{Binding IssuedCommand}"
+                                BackgroundColor="#16A34A"
+                                TextColor="White"/>
+
+                            <Button
+                                Grid.Column="1"
+                                Text="Returned"
+                                Command="{Binding ReturnedCommand}"
+                                BackgroundColor="#F59E0B"
+                                TextColor="White"/>
+
+                        </Grid>
+
+                        <Button
+                            Text="Reset"
+                            Command="{Binding ResetCommand}"
+                            BackgroundColor="#DC2626"
+                            TextColor="White"/>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <!-- LOADER -->
+        <Grid Grid.Row="1">
+            <ActivityIndicator
+                Grid.Row="1"
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                Color="Green" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <!-- RESULT LIST -->
+
+            <CollectionView
+               Margin="15,5"
+                ItemsSource="{Binding Issues}"
+                SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Frame
+                            Margin="0,0,0,12"
+                            Padding="15"
+                            CornerRadius="12"
+                            BorderColor="#E5E7EB"
+                            BackgroundColor="White">
+
+                            <VerticalStackLayout Spacing="10">
+
+                                <!-- JOURNAL NO -->
+
+                                <Label
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    TextColor="#1F2937">
+
+                                    <Label.FormattedText>
+
+                                        <FormattedString>
+
+                                            <Span
+                                                Text="Journal No : "
+                                                FontAttributes="Bold"/>
+
+                                            <Span
+                                                Text="{Binding Journal_no}"/>
+
+                                        </FormattedString>
+
+                                    </Label.FormattedText>
+
+                                </Label>
+
+                                <BoxView
+                                    HeightRequest="1"
+                                    BackgroundColor="#E5E7EB"/>
+
+                                <!-- DETAILS -->
+
+                                <Grid
+ColumnDefinitions="150,*"
+RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+RowSpacing="8">
+                                    <!-- Member -->
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Text="Member Code :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Text="{Binding MemberCode}"/>
+
+                                    <!-- Arrival Acc -->
+
+                                    <Label
+                                        Grid.Row="1"
+                                        
+                                        Text="Arrival Acc No :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Text="{Binding ArrivalAccNo}"/>
+
+                                    <!-- Catalog -->
+
+                                    <Label
+                                        Grid.Row="2"
+                                        Text="Catalog Acc No :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="2"
+                                        Grid.Column="1"
+                                        Text="{Binding CatalogAccNo}"/>
+
+                                    <!-- Issue Date -->
+
+                                    <Label
+                                        Grid.Row="3"
+                                        Text="Issue Date :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="3"
+                                        Grid.Column="1"
+                                        Text="{Binding IssueDate,StringFormat='{0:dd-MMM-yyyy}'}"/>
+
+                                    <!-- Due Date -->
+
+                                    <Label
+                                        Grid.Row="4"
+                                        Text="Due Date :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="4"
+                                        Grid.Column="1"
+                                        Text="{Binding DueDate,StringFormat='{0:dd-MMM-yyyy}'}"/>
+
+                                    <!-- Fine -->
+
+                                    <Label
+                                        Grid.Row="5"
+                                        Text="Fine Amount :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="5"
+                                        Grid.Column="1"
+                                        Text="{Binding FineAmt}"/>
+
+                                    <!-- Fine Cause -->
+
+                                    <Label
+                                        Grid.Row="6"
+                                        Text="Fine Cause :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="6"
+                                        Grid.Column="1"
+                                        Text="{Binding FineCause}"/>
+
+                                    <!-- Remark -->
+
+                                    <Label
+                                        Grid.Row="7"
+                                        Text="Remark :"
+                                        FontAttributes="Bold"/>
+
+                                    <Label
+                                        Grid.Row="7"
+                                        Grid.Column="1"
+                                        Text="{Binding Remark}"/>
+
+                                </Grid>
+
+                                <!-- STATUS -->
+
+                                <Label FontAttributes="Bold">
+
+                                    <Label.FormattedText>
+
+                                        <FormattedString>
+
+                                            <Span
+                                                Text="Status : "
+                                                FontAttributes="Bold"
+                                                TextColor="Black"/>
+
+                                            <Span
+                                                Text="{Binding IssStatus}" />
+
+                                        </FormattedString>
+
+                                    </Label.FormattedText>
+
+                                    <Label.Triggers>
+
+                                        <DataTrigger
+                                            TargetType="Label"
+                                            Binding="{Binding IssStatus}"
+                                            Value="Issued">
+
+                                            <Setter
+                                                Property="TextColor"
+                                                Value="Green"/>
+
+                                        </DataTrigger>
+
+                                        <DataTrigger
+                                            TargetType="Label"
+                                            Binding="{Binding IssStatus}"
+                                            Value="Returned">
+
+                                            <Setter
+                                                Property="TextColor"
+                                                Value="Orange"/>
+
+                                        </DataTrigger>
+
+                                    </Label.Triggers>
+
+                                </Label>
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

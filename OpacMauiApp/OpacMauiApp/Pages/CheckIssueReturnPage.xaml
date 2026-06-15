@@ -1,0 +1,129 @@
+<ContentPage
+    x:Class="OpacMauiApp.Pages.CheckIssueReturnPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Check Issue Return">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <ScrollView Grid.Row="0">
+
+            <VerticalStackLayout Padding="15">
+
+                <Frame Padding="15">
+
+                    <VerticalStackLayout Spacing="10">
+
+                        <Entry
+                            Placeholder="Accession Number"
+                            Text="{Binding AccessionNo}" />
+
+                        <Entry
+                            Placeholder="User ID"
+                            Text="{Binding UserId}" />
+
+                        <Grid
+                            ColumnDefinitions="*,*">
+
+                            <Button
+                                Text="Search"
+                                Command="{Binding SearchCommand}"
+                                BackgroundColor="Green"
+                                TextColor="White"/>
+
+                            <Button
+                                Grid.Column="1"
+                                Text="Reset"
+                                Command="{Binding ResetCommand}"
+                                BackgroundColor="Red"
+                                TextColor="White"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+        <Grid Grid.Row="1">
+
+            <CollectionView
+                Margin="10"
+                ItemsSource="{Binding Transactions}">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Frame
+                            Margin="0,0,0,10"
+                            Padding="12">
+
+                            <VerticalStackLayout
+                                Spacing="6">
+
+                                <Label
+                                    FontAttributes="Bold"
+                                    FontSize="18"
+                                    Text="{Binding accno}" />
+
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="User : "/>
+                                            <Span Text="{Binding userid1}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Issue Date : "/>
+                                            <Span Text="{Binding issuedate,StringFormat='{0:dd-MMM-yyyy}'}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Due Date : "/>
+                                            <Span Text="{Binding duedate,StringFormat='{0:dd-MMM-yyyy}'}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label>
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="Status : "/>
+                                            <Span Text="{Binding status}"/>
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

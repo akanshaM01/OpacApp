@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="OpacMauiApp.Pages.JournalCataloguePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Journal Catalogue"
+    BackgroundColor="#F3F4F6">
+
+    <Grid>
+
+        <ScrollView>
+
+            <VerticalStackLayout
+                Padding="15"
+                Spacing="15">
+
+                <!-- SEARCH CARD -->
+
+                <Frame
+                    CornerRadius="18"
+                    HasShadow="True"
+                    Padding="18"
+                    BackgroundColor="White">
+
+                    <VerticalStackLayout
+                        Spacing="12">
+
+                        <Label
+                            Text="Journal Search"
+                            FontSize="22"
+                            FontAttributes="Bold"
+                            TextColor="#1F2937"/>
+
+                        <Entry
+                            Placeholder="Journal Title"
+                            Text="{Binding Title}" />
+
+                        <Entry
+                            Placeholder="Accession No"
+                            Keyboard="Numeric"
+                            Text="{Binding Accno}" />
+
+                        <Entry
+                            Placeholder="Department"
+                            Text="{Binding Dept}" />
+
+                        <Entry
+                            Placeholder="ISSN"
+                            Text="{Binding Issn}" />
+
+                        <Entry
+                            Placeholder="Publisher"
+                            Text="{Binding Publisher}" />
+
+                        <Entry
+                            Placeholder="Agent / Vendor"
+                            Text="{Binding Agent}" />
+
+                        <!-- DATE SECTION -->
+
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            ColumnSpacing="10">
+
+                            <VerticalStackLayout>
+
+                                <Label
+                                    Text="Entry Date From"
+                                    FontAttributes="Bold"
+                                    FontSize="13"/>
+
+                                <DatePicker
+                                    Date="{Binding EntryDateFrom}" />
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout
+                                Grid.Column="1">
+
+                                <Label
+                                    Text="Entry Date To"
+                                    FontAttributes="Bold"
+                                    FontSize="13"/>
+
+                                <DatePicker
+                                    Date="{Binding EntryDateTo}" />
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                        <!-- BUTTONS -->
+
+                        <Grid
+                            ColumnDefinitions="*,*"
+                            ColumnSpacing="10">
+
+                            <Button
+                                Grid.Column="0"
+                                Text="🔍 Search"
+                                Command="{Binding SearchCommand}"
+                                BackgroundColor="#16A34A"
+                                TextColor="White"
+                                CornerRadius="10"
+                                HeightRequest="50"/>
+
+                            <Button
+                                Grid.Column="1"
+                                Text="↺ Reset"
+                                Command="{Binding ResetCommand}"
+                                BackgroundColor="#DC2626"
+                                TextColor="White"
+                                CornerRadius="10"
+                                HeightRequest="50"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+                <!-- LOADER -->
+
+                <ActivityIndicator
+                    IsVisible="{Binding IsBusy}"
+                    IsRunning="{Binding IsBusy}"
+                    Color="#16A34A"
+                    HeightRequest="40"/>
+
+                <!-- RESULT COUNT -->
+
+                <Label
+                    Text="{Binding Journals.Count,StringFormat='Results : {0}'}"
+                    FontAttributes="Bold"
+                    FontSize="16"
+                    TextColor="#374151"/>
+
+                <!-- RESULTS -->
+
+                <CollectionView
+                    ItemsSource="{Binding Journals}"
+                    SelectionMode="None">
+
+                    <CollectionView.ItemTemplate>
+
+                        <DataTemplate>
+
+                            <Frame
+                                Margin="0,0,0,12"
+                                Padding="0"
+                                CornerRadius="16"
+                                 BackgroundColor="White"
+                                BorderColor="#E5E7EB"
+                                HasShadow="True">   
+
+                                <VerticalStackLayout Padding="15" Spacing="8">
+
+                                    <!-- JOURNAL TITLE -->
+
+                                    <Label
+        Text="{Binding journal_title}"
+        FontSize="18"
+        FontAttributes="Bold"
+        TextColor="#1F2937"
+        LineBreakMode="WordWrap"/>
+
+                                    <BoxView
+        HeightRequest="1"
+        Color="#E5E7EB"/>
+
+                                    <!-- DETAILS -->
+
+                                    <Grid ColumnDefinitions="120,*">
+                                        <Label Text="Journal No"
+               FontAttributes="Bold"/>
+                                        <Label Grid.Column="1"
+               Text="{Binding journal_no}"/>
+                                    </Grid>
+
+                                    <Grid ColumnDefinitions="120,*">
+                                        <Label Text="Accession No"
+               FontAttributes="Bold"/>
+                                        <Label Grid.Column="1"
+               Text="{Binding accessionnumber}"/>
+                                    </Grid>
+
+                                    <Grid ColumnDefinitions="120,*">
+                                        <Label Text="Class No"
+               FontAttributes="Bold"/>
+                                        <Label Grid.Column="1"
+               Text="{Binding ClassNo}"/>
+                                    </Grid>
+
+                                    <Grid ColumnDefinitions="120,*">
+                                        <Label Text="Department"
+               FontAttributes="Bold"/>
+                                        <Label Grid.Column="1"
+               Text="{Binding departmentname}"/>
+                                    </Grid>
+
+                                    <Grid ColumnDefinitions="120,*">
+                                        <Label Text="Publisher"
+               FontAttributes="Bold"/>
+                                        <Label Grid.Column="1"
+               Text="{Binding publisher}"/>
+                                    </Grid>
+
+                                    <Grid ColumnDefinitions="120,*">
+                                        <Label Text="Vendor"
+               FontAttributes="Bold"/>
+                                        <Label Grid.Column="1"
+               Text="{Binding vendorname}"/>
+                                    </Grid>
+
+                                    <Grid ColumnDefinitions="120,*">
+                                        <Label Text="ISSN"
+               FontAttributes="Bold"/>
+                                        <Label Grid.Column="1"
+               Text="{Binding issn}"/>
+                                    </Grid>
+
+                                    <Grid ColumnDefinitions="120,*">
+                                        <Label Text="Entry Date"
+               FontAttributes="Bold"/>
+                                        <Label Grid.Column="1"
+               Text="{Binding entry_date,StringFormat='{0:dd-MMM-yyyy}'}"/>
+                                    </Grid>
+
+                                </VerticalStackLayout>
+
+                            </Frame>
+
+                        </DataTemplate>
+
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

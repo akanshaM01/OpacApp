@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="OpacMauiApp.Pages.JournalAccessionPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Journal Accession Search"
+    BackgroundColor="#F3F4F6">
+
+
+    <Grid RowDefinitions="Auto,*">
+        <ScrollView  Grid.Row="0">
+            <VerticalStackLayout Padding="15">
+
+                <!-- SEARCH SECTION -->
+
+                <Frame
+                CornerRadius="15"
+                Padding="15"
+                BackgroundColor="White">
+
+                    <VerticalStackLayout Spacing="10">
+
+                        <Label
+                        Text="Journal Accession Search"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        TextColor="#111827"/>
+
+                        <Entry
+                        Placeholder="Title"
+                        Text="{Binding Title}" />
+
+                        <Entry
+                        Placeholder="Accession No"
+                        Text="{Binding Accno}" />
+
+                        <Entry
+                        Placeholder="Department"
+                        Text="{Binding Dept}" />
+
+                        <Entry
+                        Placeholder="ISSN"
+                        Text="{Binding Issn}" />
+
+                        <Entry
+                        Placeholder="Publisher"
+                        Text="{Binding Publisher}" />
+
+                        <Entry
+                        Placeholder="Agent / Vendor"
+                        Text="{Binding Agent}" />
+
+                        <Grid
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="10">
+
+                            <VerticalStackLayout>
+
+                                <Label
+                                Text="Entry Date From"
+                                FontAttributes="Bold"/>
+
+                                <DatePicker
+                                Date="{Binding EntryDateFrom}" />
+
+                            </VerticalStackLayout>
+
+                            <VerticalStackLayout
+                            Grid.Column="1">
+
+                                <Label
+                                Text="Entry Date To"
+                                FontAttributes="Bold"/>
+
+                                <DatePicker
+                                Date="{Binding EntryDateTo}" />
+
+                            </VerticalStackLayout>
+
+                        </Grid>
+
+                        <Grid
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="10">
+
+                            <Button
+                            Text="Search"
+                            Command="{Binding SearchCommand}"
+                            BackgroundColor="#16A34A"
+                            TextColor="White"/>
+
+                            <Button
+                            Grid.Column="1"
+                            Text="Reset"
+                            Command="{Binding ResetCommand}"
+                            BackgroundColor="#DC2626"
+                            TextColor="White"/>
+
+                        </Grid>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+                <!-- SEARCH FILTER -->
+
+                <!--<SearchBar
+                Placeholder="Search Result..."
+                Text="{Binding FilterText}" />-->
+            </VerticalStackLayout>
+        </ScrollView>
+        <!-- LOADER -->
+        <Grid Grid.Row="1">
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                Color="Green" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+            <!-- RESULT -->
+
+            <CollectionView Margin="15,5"
+    ItemsSource="{Binding Journals}"
+    SelectionMode="None">
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame
+                Margin="0,0,0,12"
+                Padding="15"
+                CornerRadius="12"
+                BorderColor="#E5E7EB"
+                BackgroundColor="White">
+
+                            <VerticalStackLayout Spacing="10">
+
+                                <!-- Title -->
+
+                                <Label
+                        Text="{Binding journal_title}"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        TextColor="#111827" />
+
+                                <Label
+                        Text="{Binding journal_no, StringFormat='Journal No : {0}'}"
+                        FontSize="13"
+                        TextColor="Gray" />
+
+                                <BoxView
+                        HeightRequest="1"
+                        Color="#E5E7EB" />
+
+                                <!-- Basic Details -->
+
+                                <Grid
+                        ColumnDefinitions="150,*"
+                        RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto"
+                        RowSpacing="8">
+
+                                    <Label Grid.Row="0"
+                               Text="Volume :"
+                               FontAttributes="Bold" />
+
+                                    <Label Grid.Row="0"
+                               Grid.Column="1"
+                               Text="{Binding volume}" />
+
+                                    <Label Grid.Row="1"
+                               Text="Issue :"
+                               FontAttributes="Bold" />
+
+                                    <Label Grid.Row="1"
+                               Grid.Column="1"
+                               Text="{Binding issues}" />
+
+                                    <Label Grid.Row="2"
+                               Text="Part :"
+                               FontAttributes="Bold" />
+
+                                    <Label Grid.Row="2"
+                               Grid.Column="1"
+                               Text="{Binding parts}" />
+
+                                    <Label Grid.Row="3"
+                               Text="Publication Date :"
+                               FontAttributes="Bold" />
+
+                                    <Label Grid.Row="3"
+                               Grid.Column="1"
+                               Text="{Binding PublicationDate,StringFormat='{0:dd-MMM-yyyy}'}" />
+
+                                    <Label Grid.Row="4"
+                               Text="Entry Date :"
+                               FontAttributes="Bold" />
+
+                                    <Label Grid.Row="4"
+                               Grid.Column="1"
+                               Text="{Binding entry_date,StringFormat='{0:dd-MMM-yyyy}'}" />
+
+                                    <Label Grid.Row="5"
+                               Text="Accession Date :"
+                               FontAttributes="Bold" />
+
+                                    <Label Grid.Row="5"
+                               Grid.Column="1"
+                               Text="{Binding arr_date,StringFormat='{0:dd-MMM-yyyy}'}" />
+
+                                    <Label Grid.Row="6"
+                               Text="Copy No :"
+                               FontAttributes="Bold" />
+
+                                    <Label Grid.Row="6"
+                               Grid.Column="1"
+                               Text="{Binding Copy_No}" />
+
+                                    <Label Grid.Row="7"
+                               Text="Subscription No :"
+                               FontAttributes="Bold" />
+
+                                    <Label Grid.Row="7"
+                               Grid.Column="1"
+                               Text="{Binding subscription_no}" />
+
+                                </Grid>
+
+                                <!-- More Details Button -->
+
+                                <Button
+                        Text="More Details"
+                        BackgroundColor="#4F46E5"
+                        TextColor="White"
+                        CornerRadius="8"
+                        Command="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.ToggleMoreCommand}"
+                        CommandParameter="{Binding}" />
+
+                                <!-- Expanded Section -->
+
+                                <Frame
+                        IsVisible="{Binding ShowMore}"
+                        BackgroundColor="#EEF4FF"
+                        CornerRadius="8"
+                        Padding="10"
+                        BorderColor="#D6E4FF">
+
+                                    <Grid
+                            ColumnDefinitions="120,*"
+                            RowDefinitions="Auto,Auto,Auto,Auto"
+                            RowSpacing="8">
+
+                                        <Label Grid.Row="0"
+                                   Text="Department :"
+                                   FontAttributes="Bold" />
+
+                                        <Label Grid.Row="0"
+                                   Grid.Column="1"
+                                   Text="{Binding departmentname}" />
+
+                                        <Label Grid.Row="1"
+                                   Text="Publisher :"
+                                   FontAttributes="Bold" />
+
+                                        <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding firstname}" />
+
+                                        <Label Grid.Row="2"
+                                   Text="Vendor :"
+                                   FontAttributes="Bold" />
+
+                                        <Label Grid.Row="2"
+                                   Grid.Column="1"
+                                   Text="{Binding vendorname}" />
+
+                                        <Label Grid.Row="3"
+                                   Text="ISSN :"
+                                   FontAttributes="Bold" />
+
+                                        <Label Grid.Row="3"
+                                   Grid.Column="1"
+                                   Text="{Binding issn}" />
+
+                                    </Grid>
+
+                                </Frame>
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+        </Grid>
+
+    </Grid>
+    
+
+
+</ContentPage>

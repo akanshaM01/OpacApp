@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="OpacMauiApp.Pages.LoginPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+
+        <!-- Background -->
+        <Image
+            Source="librarybg.jpg"
+            Aspect="AspectFill"/>
+
+        <!-- Overlay -->
+        <BoxView Color="#66000000"/>
+
+        <ScrollView>
+
+            <VerticalStackLayout
+                Padding="30,80,30,30"
+                Spacing="25">
+
+                <!-- Header -->
+                <VerticalStackLayout Spacing="5">
+
+                    <Label
+                        Text="Library OPAC"
+                        FontSize="32"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Center"/>
+
+                    <Label
+                        Text="Library Management System"
+                        FontSize="14"
+                        TextColor="White"
+                        HorizontalOptions="Center"/>
+
+                </VerticalStackLayout>
+
+                <!-- Login Box -->
+                <Border
+                    BackgroundColor="White"
+                    StrokeThickness="0"
+                    StrokeShape="RoundRectangle 20"
+                    Padding="20">
+
+                    <VerticalStackLayout Spacing="18">
+
+                        <Entry
+                            x:Name="txtUser"
+                            Placeholder="User ID"
+                            HeightRequest="50"
+                            BackgroundColor="#F1F5F9"
+                            TextColor="Black"/>
+
+                        <Entry
+                            x:Name="txtPass"
+                            Placeholder="Password"
+                            IsPassword="True"
+                            HeightRequest="50"
+                            BackgroundColor="#F1F5F9"
+                            TextColor="Black"/>
+
+                        <Button
+    x:Name="btnLogin"
+    Text="LOGIN"
+    Clicked="btnLogin_Clicked"
+    HeightRequest="50"
+    BackgroundColor="#2563EB"
+    TextColor="White"
+    CornerRadius="12"/>
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+            </VerticalStackLayout>
+
+        </ScrollView>
+
+    </Grid>
+
+</ContentPage>

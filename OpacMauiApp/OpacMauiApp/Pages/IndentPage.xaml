@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    x:Class="OpacMauiApp.Pages.IndentPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Indent Search"
+    BackgroundColor="#F3F4F6">
+
+    <Grid RowDefinitions="Auto,*">
+
+        <!-- Search Area -->
+
+        <ScrollView Grid.Row="0">
+
+            <Frame
+                Margin="15"
+                Padding="15"
+                CornerRadius="12"
+                BackgroundColor="White">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label
+                        Text="Indent Search"
+                        FontSize="22"
+                        FontAttributes="Bold"/>
+
+                    <Entry
+                        Placeholder="Indent Number"
+                        Text="{Binding IndentNumber}" />
+
+                    <DatePicker
+                        Date="{Binding DateFrom}" />
+
+                    <DatePicker
+                        Date="{Binding DateTo}" />
+
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="10">
+
+                        <Button
+                            Text="Search"
+                            Command="{Binding SearchCommand}"
+                            BackgroundColor="Green"
+                            TextColor="White"/>
+
+                        <Button
+                            Grid.Column="1"
+                            Text="Reset"
+                            Command="{Binding ResetCommand}"
+                            BackgroundColor="Red"
+                            TextColor="White"/>
+
+                    </Grid>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+        </ScrollView>
+
+        <!-- Result -->
+
+        <Grid Grid.Row="1">
+
+            <CollectionView
+                Margin="15,0"
+                ItemsSource="{Binding Indents}">
+
+                <CollectionView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <Frame
+                            Margin="0,0,0,10"
+                            Padding="12"
+                            CornerRadius="10"
+                            BackgroundColor="White">
+
+                            <VerticalStackLayout>
+
+                                <Label
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    Text="{Binding indentnumber}" />
+
+                                <Label Text="{Binding indentdate,StringFormat='Date : {0:dd-MMM-yyyy}'}" />
+                                <Label Text="{Binding requestercode,StringFormat='requestercode : {0}'}" />
+                                <Label Text="{Binding title,StringFormat='title : {0}'}" />
+                                <Label Text="{Binding firstname1,StringFormat='Name : {0}'}" />
+
+                                <Label Text="{Binding status,StringFormat='Status : {0}'}" />
+                                <Label Text="{Binding publisher,StringFormat='publisher : {0}'}" />
+
+                                <Label Text="{Binding departmentname,StringFormat='Department : {0}'}" />
+
+                                <Label Text="{Binding price,StringFormat='price : {0}'}" />
+                                <Label Text="{Binding totalamount,StringFormat='totalamount : {0}'}" />
+
+                            </VerticalStackLayout>
+
+                        </Frame>
+
+                    </DataTemplate>
+
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+
+            <ActivityIndicator
+                IsRunning="{Binding IsBusy}"
+                IsVisible="{Binding IsBusy}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>

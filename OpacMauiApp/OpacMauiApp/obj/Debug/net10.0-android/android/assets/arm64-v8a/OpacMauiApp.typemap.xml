@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="OpacMauiApp" mvid="8f635c00ac8e4ba7a2d5276dd63f5a36">
+  <java-to-managed>
+    <entry java-name="crc645c87a91ec93c24ed/MainActivity" managed-name="OpacMauiApp.MainActivity, OpacMauiApp" managed-type-token-id="33554453" />
+    <entry java-name="crc645c87a91ec93c24ed/MainApplication" managed-name="OpacMauiApp.MainApplication, OpacMauiApp" managed-type-token-id="33554454" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc645c87a91ec93c24ed/MainActivity" managed-name="OpacMauiApp.MainActivity, OpacMauiApp" managed-type-token-id="33554453" />
+    <entry java-name="crc645c87a91ec93c24ed/MainApplication" managed-name="OpacMauiApp.MainApplication, OpacMauiApp" managed-type-token-id="33554454" />
+  </managed-to-java>
+</api>
